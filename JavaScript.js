@@ -19,25 +19,26 @@ class Cliente {
 }
 
 let boton = document.getElementById("enviar");
-boton.addEventListener("click", cargarCliente);                          //( parametro, funcion )
+boton.addEventListener("click", cargarCliente); 
+                                                        
 
 //caputra elementos
 let cliente1= {}
 
 function cargarCliente(){
-  console.log("culo")
-  let nombre = document.getElementById("formName").value;
-  let celular = document.getElementById("formCell").value;
-  let mail = document.getElementById("formMail").value;
-  let direccion =  document.getElementById("formDirec").value;
-  let instagram=  document.getElementById("code").value;
-  let amigos=  document.getElementById("friends").value;
-  let face=  document.getElementById("face").value;
-  let mensaje=  document.getElementById("mensaje").value;
+  let nombre = document.getElementById("formName");
+  let celular = document.getElementById("formCell");
+  let mail = document.getElementById("formMail");
+  let direccion =  document.getElementById("formDirec");
+  let instagram=  document.getElementById("insta");
+  let amigos=  document.getElementById("amigos");
+  let face=  document.getElementById("face");
+  let mensaje=  document.getElementById("mensaje");
   cliente1= new Cliente (nombre, celular,mail,direccion,instagram,amigos,face,mensaje)
 console.log(cliente1);
 mostrarCliente(cliente1)
 }
+
 
 //BORRAS LOS ELEMENTOS 
 function mostrarCliente (cliente){
@@ -48,7 +49,8 @@ function mostrarCliente (cliente){
 
 
 //AGREGAR ELEMENTOS 
-let nuevoContenido = document.createElement("div");
+let nuevoContenido = document.createElement("h1
+");
 nuevoContenido.innerHTML = `<h1>Gracias ${Cliente.nombre} ! Sus datos ya fueron registrados y en breve se lo enviaremos a la dirección $ {Cliente.direccion}</h1>`
 
 
