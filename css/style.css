@@ -16,12 +16,11 @@
 .btn_cancel {
   background-color: #d8c5c6; }
 
-/*  Variables de las operaciones */
-/* @import 'variables';
-@import 'general';
-@import 'estilosSass';
-@import 'maps';
-@import 'style.css'; */
+.navbar-toggler {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 .fav {
   color: red;
   font-size: 10rem;
@@ -48,7 +47,7 @@
   top: 0;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgb(255, 255, 255);
   border-radius: 5px;
   cursor: pointer;
   transition: box-shadow 0.5s ease-in; }

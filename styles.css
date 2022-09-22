@@ -74,6 +74,9 @@ header .header__menu .header__closeMenu {
   padding: 1%;
 }
 
+.btn{
+  margin-top: 16px;
+}
 /*saco el subrayado predeterminado en el menu*/
 a {
   text-decoration: none;
@@ -120,6 +123,7 @@ a {
   .container-fluid {
     margin-left: -30%;
   }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -362,6 +366,7 @@ a {
     left: 30%;
     top: 15px;
   }
+
 
   #carouselExampleControls .carousel-inner .carousel-item img {
     width: 150%;
@@ -647,6 +652,7 @@ footer {
 
 .contact__form--buttonsContainer {
   margin-bottom: 30%;
+  margin-left: auto;
 }
 
 #conected {
@@ -657,3 +663,4 @@ footer {
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
+}

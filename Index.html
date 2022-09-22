@@ -14,6 +14,10 @@
     <meta property="og:type" content="website">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://MagicBalloons.com" />
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/6ad2795456.js" crossorigin="anonymous"></script>
+  <!-- stilos propios -->
+  <link rel="stylesheet" href="assets/style.css">
   
     
     
@@ -25,43 +29,30 @@ plataforma fontawsome con el codigo copiado que brinda la pagina-->
 <body>
   <header>
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: #000000 ;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"> <img src="./Images/LogoN.png" alt="Globo Magico" rel="stylesheet" width="200px" height="150px"/></a>
+      <div class="container-fluid mb-10">
+        <a class="navbar-brand" href="#"> <img src="./Images/LogoN.png" alt="Globo Magico" rel="stylesheet" width="190px" height="140px"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-color">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./Index.html"><span class="icon-home3"></span>Home</a>
+            
+            <li class="navbar-nav me-auto mb-4 mb-lg-4" id="categoria">
+              <a class="nav-link align-self-center btn btn-primary btn--navbar me-2 contacPage" href="./Index.html"><span class="icon-home3"></span>Productos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Productos.html"><span class="price-tags"></span>Productos</a>
+            <li class="navbar-nav me-auto mb-4 mb-lg-4" id="categoria">
+              <a class="nav-link align-self-center btn btn-primary btn--navbar me-2 contacPage" href="./Pages/Contacto.html"><span class="bubbles"></span>Contacto</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Galeria.html"><span class="images"></span>Galeria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Como-comprar.html"><span class="pencil2"></span>Como comprar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Pages/Contacto.html"><span class="bubbles"></span>Contacto</a>
-            </li>
+          
           </ul>
-          <form class="d-flex boton">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-success me-4 btn--navbar mb-4" type="submit" id="btnCart" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                class="fas fa-shopping-cart"></i><span id="contadorCarrito" class="contador">0</span></button>
+            <button class="btn btn-outline-danger btn--navbar mb-4" type="submit" id="btnVaciarCarrito"><i
+                class="fas fa-trash-alt"></i></button>
           </form>
-          <div id="carrito">
-            <button>
-               <i class="fas fa-cart-arrow-down"></i>    
-             </button>
-         </div>
-         <div class="login">
-            <a href="./Perfil.html">
-             <i class="fas fa-user-circle"></i>
-            </a>
-         </div>
+         
         </div>
       
 
@@ -88,70 +79,19 @@ plataforma fontawsome con el codigo copiado que brinda la pagina-->
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-  </div>
-      <section >
-            <div class="nuestrosproductos">
+   </div>
+   <section class="container contenedor-cards">
+    <div class="nuestrosproductos">
                <h2> Nuestros Productos</h2>
             </div>        
           <div id="products-main">
             <section class="py-8 pt-xs-0">
-              <input type="hidden" id="hdnBreadcrumb_0" value="17">
-              <input type="hidden" id="hdnBreadcrumb_1" value="21">
-              <input type="hidden" id="hdnBreadcrumbCounter" value="2">
-              <div class="container shopContainer">
-              <div class="row">
-                  <div class="col-12 col-md-4 col-lg-3">
-                     <form class="mb-md-0 mt-8">
-                        <ul class="nav nav-vertical" id="filterNav">
-                        <li class="nav-item">
-                           <h6 class="textSearch text-dark">Decoración fiestas</h6>
-                        </li>
-                        <li class="nav-item">
-                          <div class="collapse show" id="categoryCollapse">
-                              <div class="form-group">
-                                 <ul class="nav nav-vertical d-flex flex-column" id="subFilterNav">
-                                 <li id="category_21" class="nav-item">
-                                    <a class="nav-link dropdown-toggle font-size-lg text-reset border-bottom" data-toggle="collapse">
-                                         Bebidas
-                                       </a> 
-                                     <div class="ml-4 collapse show" id="categoryCollapse_21" >
-                                          <div class="form-group">
-                                             <ul class="list-styled mb-0" id="productsNav">
-                                             <li id="category_322" class="nav-item">
-                                               <a class="nav-link font-size-lg border-bottom mb-6 text-pynk">
-                                                 Categoría</a>
-                                             </li>
-                                             <li id="category_322" class="nav-item">
-                                              <a class="nav-link font-size-lg border-bottom mb-6 text-pynk">
-                                                Tiempo de entrega</a>
-                                            </li>
-                                            <li id="category_322" class="nav-item">
-                                              <a class="nav-link font-size-lg border-bottom mb-6 text-pynk">
-                                               Descuentos</a>
-                                            </li>
-                                            <li id="category_322" class="nav-item">
-                                              <a class="nav-link font-size-lg border-bottom mb-6 text-pynk">
-                                               Combos</a>
-                                            </li>
-                                            <div class="btn_success">TODO</div>
-                                            <div class="btn_alert">PARA</div>
-                                            <div class="btn_cancel">VOS</div>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                      </form>
-                    </div>
-                    <div class="col-12  col-md-8 col-lg-9 ">
+              <div class="col-12  col-md-8 col-lg-9 ">
                       <div class="row align-items-center mb-7">
                         <div class="col-12 col-md titleShop">
                              <h3 class="mb-5 text-dark">Mayorista de Bebidas</h3>
-                             
+                        </div>   
+                      </div>
                   </div>
                   <div class="col-12 col-md-auto">
                     <div class="ordenada">
@@ -171,172 +111,41 @@ plataforma fontawsome con el codigo copiado que brinda la pagina-->
                       </div> 
                     </div>
                   </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col">
-                          <div class="col order-1">
-                            <div class=" col-sm-12 col-md-12">
-                                <div class="card products-card mb-7 productCard">
-                                  <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                      
-                                      <div class="card-img text-center">
-                                       <a class="card-img-hover" href="./Images/botellasVino.png"></a>
-                                       <img src="./Images/botellasVino.png" class="card-img-top" alt="Globo Numerico">
-                                       <div class="card-body">
-                                        <p class="card-title">Pack Vino <p>
-                                        <p class="card-title">$32000</p>
-                                         <!-- Button trigger modal -->
-                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                             Comprar
-                                         </button>
-                                      </div>
-                                  </div>
-                                </div>
-                                <div class="card products-card mb-7 productCard">
-                                <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                    <div class="card-img text-center">
-                                       <a class="card-img-hover" href="./Images/cerveza-budweiser-lata.png"></a>
-                                       <img src="./Images/cerveza-budweiser-lata.png" class="card-img-top" alt="Globo Numerico">
-                                       <div class="card-body">
-                                         <p class="card-title">Cerveza Busweiser</p>
-                                         <p class="card-title">$900</p>
-                                         <!-- Button trigger modal -->
-                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                             Comprar
-                                         </button>
-                                      </div>
-                                   </div>
-                                 </div>
+
+                  <section class="container contenedor-cards">
+                    <div class="row text-center" id="productos">
+                      
+                      <template id="templateCard">
+                
+                        <div class="col-12 col-md-4 mt-3 mb-3 d-flex justify-content-center">
+                          <div class="card text-dark" style="width: 18rem;">
+                              <img src="${images}" class="card-img-top">
+                              <div class="card-body">
+                                
+                                  <h5 class="card-title">${nombre}</h5>
+                                  <p class="card-text">${aviso}</p>
+                                  <p class="card-text">$ ${precio}</p>
+                                  <button class="btn btn-primary btn--card btnComprar" dataset=${id} id="btnAgregar${id}">Comprar</button>
+                                  
                               </div>
-                              <div class="card products-card mb-7 productCard">
-                                <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                    <div class="card-img text-center">
-                                       <a class="card-img-hover" href="./Images/smirnoff-watermelon.png"></a>
-                                       <img src="./Images/smirnoff-watermelon.png" class="card-img-top" alt="Globo Numerico">
-                                       <div class="card-body">
-                                         <p class="card-title">Vodka Watermelon</p>
-                                         <p class="card-title">$1400</p>
-                                         <!-- Button trigger modal -->
-                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                             Comprar
-                                         </button>
-                                      </div>
-                                   </div>
-                                 </div>
-                              </div>
-                            </div>
-                        
-                         <div class="col order-5">
-                          <div class=" col-sm-12 col-md-12">
-                            <div class="card products-card mb-7 productCard">
-                               <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                   
-                                   <div class="card-img text-center">
-                                     <a class="card-img-hover" href="./Images/Ipa.png"></a>
-                                     <img src="./Images/Ipa.png" class="card-img-top" alt="Globo Numerico">
-                                     <div class="card-body">
-                                       <p class="card-title">Cerveza Ipa </p>
-                                       <p class="card-title">$900</p>
-                                       <!-- Button trigger modal -->
-                                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                           Comprar
-                                       </button>
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="card products-card mb-7 productCard">
-                                <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                    <div class="card-img text-center">
-                                       <a class="card-img-hover" href="./Images/JackDaniel.png"></a>
-                                       <img src="./Images/JackDaniel.png" class="card-img-top" alt="Globo Numerico">
-                                       <div class="card-body">
-                                         <p class="card-title">Whisky Jack Daniel</p>
-                                         <p class="card-title">$4000</p>
-                                         <!-- Button trigger modal -->
-                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                             Comprar
-                                         </button>
-                                      </div>
-                                   </div>
-                                </div>
-                                <div class="card products-card mb-7 productCard">
-                                    <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                        <div class="card-img text-center">
-                                           <a class="card-img-hover" href="./Images/Patagonia.png"></a>
-                                           <img src="./Images/Patagonia.png" class="card-img-top" alt="Globo Numerico">
-                                           <div class="card-body">
-                                             <p class="card-title">Cerveza Patagonia</p>
-                                             <p class="card-title">$1000</p>
-                                             <!-- Button trigger modal -->
-                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                 Comprar
-                                             </button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                      </div>
-                        <div class="col order-1">
-                          <div class=" col-sm-12 col-md-12">
-                            <div class="card products-card mb-7 productCard">
-                               <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                   
-                                   <div class="card-img text-center">
-                                     <a class="card-img-hover" href="./Images/vodka.png"></a>
-                                     <img src="./Images/vodka.png" class="card-img-top" alt="Globo Numerico">
-                                     <div class="card-body">
-                                      <p class="card-title">Vodka <p>
-                                      <p class="card-title">$2200</p>
-                                       <!-- Button trigger modal -->
-                                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                           Comprar
-                                       </button>
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="card products-card mb-7 productCard">
-                              <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                  <div class="card-img text-center">
-                                     <a class="card-img-hover" href="./Images/VodkaAbsolut.png"></a>
-                                     <img src="./Images/VodkaAbsolut.png" class="card-img-top" alt="Globo Numerico">
-                                     <div class="card-body">
-                                       <p class="card-title"> Vodka Absolut</p>
-                                       <p class="card-title">$2800</p>
-                                       <!-- Button trigger modal -->
-                                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                           Comprar
-                                       </button>
-                                    </div>
-                                 </div>
-                               </div>
-                            </div>
-                            <div class="card products-card mb-7 productCard">
-                              <div class="badge card-badge card-badge-left text-uppercase"> </div>
-                                  <div class="card-img text-center">
-                                     <a class="card-img-hover" href="./Images/WHISKY.png"></a>
-                                     <img src="./Images/WHISKY.png" class="card-img-top" alt="Globo Numerico">
-                                     <div class="card-body">
-                                       <p class="card-title">Whisky</p>
-                                       <p class="card-title">$5400</p>
-                                       <!-- Button trigger modal -->
-                                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                           Comprar
-                                       </button>
-                                    </div>
-                                 </div>
-                               </div>
-                            </div>
                           </div>
                         </div>
-                      </div>
+                        
+                      </template>
+                                      
                     </div>
-                </div>
-           </div>
-    </section>
+                  </section>
+                
+            </section>
+
+  
   </main>
   <div class="gallery__topButton">
         <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
   </div>
+
+
+
   <footer>
     <div class="container_footer">
         <div class="box__footer">
@@ -383,7 +192,7 @@ plataforma fontawsome con el codigo copiado que brinda la pagina-->
           </div>
      </div>
 </footer>
-    <script src="./JavaScript.js" defer></script>
+    <script src="./app.js" defer></script>
      <!-- Bootstrap Scripts -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
