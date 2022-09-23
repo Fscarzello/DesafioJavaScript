@@ -6,6 +6,9 @@
   scroll-behavior: smooth;
 }
 
+main {
+  background-color: #efefef;;
+}
 .logowpp {
   /*se mantiene fijo el logo de wpp aunque el costumer scrolle*/
   position: fixed;
@@ -465,7 +468,7 @@ a {
 
 /*footer*/
 footer {
-  margin-top: 3%;
+ 
   background-color: beige; /*le agrego el logo al footer cambiando sus colores para que sea una vista limpia*/
   padding: 10px;
 }
@@ -663,4 +666,11 @@ footer {
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
+}
+
+.contenedor-cards {
+  border-top: 3px solid #630000;
+  border-bottom: 3px solid #630000;
+  border-radius: 5px;
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.5);
 }
