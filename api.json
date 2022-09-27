@@ -2,7 +2,7 @@
     {
       "id":1,
       "nombre":"Pack Vino",
-      "precio":32000,
+      "precio":33000,
       "imagen": "./Images/botellasVino.png"
     
     },

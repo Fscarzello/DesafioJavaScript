@@ -72,6 +72,10 @@ header .header__menu .header__closeMenu {
 }
 
 
+.card {
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px rgb(0 0 0 / 50%);
+}
 
 #carrito {
   padding: 1%;
@@ -128,6 +132,7 @@ a {
   }
   
 }
+
 
 @media screen and (max-width: 600px) {
   .menu-navegacion {

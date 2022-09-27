@@ -16,9 +16,10 @@
 .btn_cancel {
   background-color: #d8c5c6; }
 
-.navbar-toggler {
-    background-color: #000000;
+nav .navbar-toggler {
+    background-color: #a350a3;
     color: #ffffff;
+  
 }
 
 .fav {

@@ -1,99 +1,93 @@
+// Variables del DOM
 
+const btnCart = document.getElementById("btnCart");
+const btnVaciarCarrito = document.getElementById("btnVaciarCarrito");
+const contadorCarrito = document.getElementById("contadorCarrito");
+const modalCarrito = document.getElementsByClassName("modal-body")[0];
+let productos = [];
 
+console.log(modalCarrito)
 
-
-// CARRITO DE PRODUTOS
-
-
-
- const btnCart = document.getElementById('btnCart')
- const btnVaciarCarrito = document.getElementById('btnVaciarCarrito');
- const contadorCarrito = document.getElementById('contadorCarrito');
- const productos = document.getElementById('productos');
- const carritoDeCompras = [];
-
-
- // carga el dom y ejecuta el fetch para obtener los datos de la api local
- window.addEventListener('DOMContentLoaded', () => {
-
-  fetch('../api.json')
-  .then(response => response.json())
-  .then(products => {
-      console.log(products)
-      
-      renderProductos(products)
-   
-      
-  })
-  
-  .catch( er => console.log(er))
-  console.log('dom cargado')
-})
+// carga el dom y ejecuta el fetch para obtener los datos de la api local y renderizar los productos
+window.addEventListener("DOMContentLoaded", async () => {
+  fetch("../api.json")
+    .then((response) => response.json())
+    .then((products) => {
+      productos = products;
+      renderProductos(productos);
+    })
+    .catch((er) => console.log(er));
+});
 
 function renderProductos(productos) {
-  productos.forEach(({imagen, nombre, aviso, precio, id}) => {
-      
-      const prodHTML = `
+  productos.forEach(({ imagen, nombre, precio, id }) => {
+    const prodHTML = `
           <div class="col-12 col-md-4 mt-3 mb-3 d-flex justify-content-center">
               <div class="card text-dark" style="width: 18rem;">
                   <img src= ${imagen} class="card-img-top">
                   <div class="card-body">
                       <h5 class="card-title">${nombre}</h5>
-                      <p class="card-text">${aviso}</p>
                       <p class="card-text precio">$ ${precio}</p>
-                      <button class="btn btn-primary btn--card btnComprar" dataset=${id} id="btnAgregar${id}">Añadir al carrito</button>
+                      <button class="btn btn-primary btn--card btn-agregar" dataset=${id} id="btnAgregar${id}">Añadir al carrito</button>
                       
                   </div>
               </div>
           </div>
       `;
-      document.getElementById('productos').innerHTML += prodHTML;
-      console.log(id)
-  })
- 
 
-  // captura los click del contenedor de productos
-  productos.addEventListener('click', e => {
-    addCarrito(e)
-})
-
+    document.getElementById("productos").innerHTML += prodHTML;
+  });
 }
-// muestra el elemento del click btn comprar de cada card
-const addCarrito = e => {
-	console.log(e.target.classList.contains('btnComprar'))
 
-    let cantidad = 1
-    let nombre = document.querySelector('.card-title').textContent
-    let precio = document.querySelector('.precio').textContent
-    carritoDeCompras.push(cantidad)
-    
-    
+document.addEventListener("click", function (e) {
+  for (let producto of productos) {
+    if (e.target && e.target.id === `btnAgregar${producto.id}`) {
+      agregarCarrito(producto);
+    }
+  }
+});
 
-    const renderCart = (carritoDeCompras) => {
-    carritoDeCompras.forEach(({nombre, cantidad, precio}) => {
+// Carrito
+const carritoDeCompras = JSON.parse(localStorage.getItem("carrito")) || [];
+let precioCarrito = JSON.parse(localStorage.getItem("precioCarrito")) || 0;
+contadorCarrito.innerText = carritoDeCompras.length;
+console.log(carritoDeCompras);
 
-        let modalList = `
-            <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span class="badge bg-primary rounded-pill">${cantidad}</span>
-                ${nombre} ${precio}
-                <button type="button" class="btn btn-secondary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                    rmv
-                </button>
-                </li>
-            </ul>
-            `;
-        document.querySelector('.modal-body').innerHTML += modalList
-    })
+const agregarCarrito = (producto) => {
+  let productoEnCarrito = false;
 
-    renderCart()
-}
-        
+  for (let item of carritoDeCompras) {
+    if (item.producto.id === producto.id) {
+      productoEnCarrito = true;
+      item.cantidad += 1;
+    }
+  }
 
-	if(e.target.classList.contains('btnComprar')) {
-     
-      actualizarCarrito()
-      almacenarCarrito()
-	}
-	e.stopPropagation()
-}
+  if (!productoEnCarrito) {
+    carritoDeCompras.push({
+      producto,
+      cantidad: 1,
+    });
+  }
+
+  contadorCarrito.innerText = carritoDeCompras.length;
+  precioCarrito += producto.precio;
+  console.log(carritoDeCompras);
+  console.log("Precio carrito: ", precioCarrito);
+  localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
+  localStorage.setItem("precioCarrito", JSON.stringify(precioCarrito));
+
+};
+
+// previene el refresh del boton carrito
+btnCart.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("btn carrito presionado");
+
+  if (carritoDeCompras != null && carritoDeCompras != undefined) {
+    // renderCart()
+  } else {
+    sweetAlertVaciar();
+  }
+  console.log(carritoDeCompras);
+});
