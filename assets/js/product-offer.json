@@ -1,0 +1,40 @@
+[
+
+    {
+
+        "id": 1, 
+        "item": "Whisky Jack Daniel", 
+        "description": "Jack no seria nada sin Daniel.", 
+        "price": 4000, 
+        "img": "./assets/img/JackDaniel.png"
+    
+    },
+    {
+
+        "id": 2, 
+        "item": "Cerveza Patagonia", 
+        "description": "Malta rica y nutritiva", 
+        "price": 1000, 
+        "img": "./assets/img/Patagonia.png"
+    
+    },
+    {
+        
+        "id": 3, 
+        "item": "Vodka Absolut", 
+        "description": "Vodka de absoluta riqueza", 
+        "price": 2800, 
+        "img": "./assets/img/VodkaAbsolut.png"
+    
+    },
+    {
+        
+        "id": 4, 
+        "item": "Whisky", 
+        "description": "Un buen Whisy para dias grises", 
+        "price":5400, 
+        "img": "./assets/img/WHISKY.png"
+    
+    }
+
+]
