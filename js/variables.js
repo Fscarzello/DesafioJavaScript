@@ -12,8 +12,8 @@ const totalPrice = document.querySelector(".total-price");
 const boxProds = document.querySelector(".cover__cart-products");
 const buyAllBtn = document.querySelector(".cover__cart-buy");
 
-const newJSON = 'assets/js/product-new.json';
-const offerJSON = 'assets/js/product-offer.json';
+const newJSON = 'js/product-new.json';
+const offerJSON = 'js/product-offer.json';
 
 const productsNew = [];
 const productsOffers = [];

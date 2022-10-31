@@ -5,7 +5,7 @@
         "item":"Pack Vino",
         "description": "Pack de vino, uva importada",
         "price":33000,
-        "img": "./assets/img/botellasVino.png"
+        "img": "./images/botellasVino.png"
      
          
     },
@@ -15,7 +15,7 @@
         "item": "Cerveza Busweise",
         "description": "Cerveza con malta importada", 
         "price": 900, 
-        "img": "./assets/img/cerveza-budweiser-lata.png"
+        "img": "./images/cerveza-budweiser-lata.png"
     
     },
     {
@@ -24,7 +24,7 @@
         "item": "Vodka Watermelon", 
         "description": "Exclusivo sabor.", 
         "price": 1400, 
-        "img": "./assets/img/smirnoff-watermelon.png"
+        "img": "./images/smirnoff-watermelon.png"
     
     },
     {
@@ -33,7 +33,7 @@
         "item": "Cerveza Ipa", 
         "description": "Malta de calidad", 
         "price": 900, 
-        "img": "./assets/img/Ipa.png"
+        "img": "./images/Ipa.png"
     
     }
 
